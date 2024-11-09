@@ -1,0 +1,299 @@
+/*Estilos Generales*/
+* {
+    margin: 0;
+    /*elimina el margen predeterminado para todos los elementos*/
+    padding: 0;
+    /*elimina el relleno predeterminado para todos los elementos*/
+    box-sizing: border-box;
+    /*Incluye el padding y el borde en el ancho y alto total*/
+    font-family: "Roboto", sans-serif;
+    /*establece la fuente roboto para toda la página*/
+}
+
+body {
+    background: #000;
+}
+
+/*Capa de fondo*/
+body::before {
+    content: "";
+    /*crea un contenido vacio para la capa de fondo*/
+    position: absolute;
+    /*Posiciona de forma absoluta en relación al cuerpo*/
+    left: 0;
+    /*alinea la capa a la izquierda*/
+    top: 0;
+    /*alinea la capa a la parte superior*/
+    opacity: 0.7;
+    /*Establece la opacidad de la capa*/
+    width: 100%;
+    /*ancho completo de la capa*/
+    height: 100%;
+    /*alto completo de la capa*/
+    background: url(fondo\ Jose\ A..jpeg) no-repeat center center fixed;
+    /*Imagen de fondo centrado y fija*/
+    background-size: cover;
+    /*ajusta la imagen para cubrir todo el fondo*/
+}
+
+.logo {
+    position: absolute;
+    /*posiciona el logo de forma absoluta*/
+    top: 10px;
+    /*ajusta la posición vertical del logo*/
+    left: 80px;
+    /*ajusta la posición horizontal del logo*/
+    width: 120px;
+    /*ancho del logo*/
+}
+
+/*Estilos del contenedor del formulario*/
+.form-wrapper {
+    position: absolute;
+    /*posiciona de forma absoluta*/
+    left: 50%;
+    /*alinea el centro horizontalmente*/
+    top: 50%;
+    /*alinea el centro verticalmente*/
+    transform: translate(-50%, -50%);
+    /*centra el contenedor en ambas direcciones*/
+    border-radius: 4px;
+    /*bordes redondeados*/
+    padding: 70px;
+    /*añade relleno interno*/
+    width: 450px;
+    /*ancho fijo del contenedor*/
+    background: rgb(0, 0, 0, 0.75);
+    /* fondo negro semitransparente*/
+}
+
+/*Estilo de encabezado*/
+.form-wrapper h2 {
+    color: #fff;
+    /*color del texto en blanco*/
+    font-size: 2rem;
+    /*tamaño de fuente del encabezado*/
+    margin-bottom: 25px;
+    /*espacio inferior del encabezado*/
+}
+
+/*estilos del formularios*/
+.form-wrapper form {
+    margin: 25px 0 65px;
+    /*margenes superior, inferior y lateral */
+}
+
+/*estilos de los controles del formulario*/
+.form-control {
+    height: 50px;
+    /*altura fija para los campos del formulario*/
+    position: relative;
+    /*posiciona de forma relativa para los elementos internos*/
+    margin-bottom: 16px;
+    /*margen inferior entre controles*/
+}
+
+.form-control input {
+    height: 100%;
+    /*altura completa para el campo de entrada*/
+    width: 100%;
+    /*anchura completa para el campo de entrada*/
+    background: #333;
+    /*fondo gris oscuro*/
+    border: none;
+    /*sin bordes*/
+    border-radius: 4px;
+    /*nordes redondeados*/
+    color: #fff;
+    /*texto blanco en el campo de entrada*/
+    font-size: 1rem;
+    /*tamaño de fuente*/
+    padding: 0 20px;
+    /*relleno de la fuente*/
+    opacity: 0.7;
+    /*opacidad de campo*/
+}
+
+/*estilo del campo de entrada cuando está enfocado*/
+.form-control input:focus {
+    background: #444;
+    /*fondo ligeramente más claro cuando está enfocado*/
+}
+
+/*estilo de la etiqueta*/
+.form-control label {
+    position: absolute;
+    /*posiciona de forma absoluta dentro del campo*/
+    left: 20px;
+    /*alinea la etiqueta a la izquierda*/
+    top: 50%;
+    /*centra verticalmente la etiqueta*/
+    transform: translateY(-50%);
+    /*ajusta la posicion vertical*/
+    color: #8c8c8c;
+    /*color gris claro suave para cambios*/
+    transition: all 0.1s ease;
+    /*transicion suave para cambios*/
+}
+
+/*Estilos de la etiqueta al enfocar el campo si es válida*/
+.form-control input:focus~label,
+.form-control input:valid~label {
+    font-size: 0.75rem;
+    /*tamaño de fuente reducido*/
+    transform: translateY(-130%);
+    /*mueve la etiqueta hacia arriba*/
+}
+
+/*estilos de botones*/
+form button {
+    width: 100%;
+    /*ancho completo para el botón*/
+    padding: 16px 0;
+    /*relleno vertical del botón*/
+    font-size: 1rem;
+    /*tamaño de fuente*/
+    background: #e50914;
+    /*fondo rojo para el botón*/
+    color: #fff;
+    /*color del texto*/
+    border-radius: 4px;
+    /*bordes redondos*/
+    border: none;
+    /*sin bordes*/
+    cursor: pointer;
+    /*cambia el cursor a puntero*/
+    transition: 0.1s ease;
+    /*transicion suave para cambios*/
+    margin: 25px 0 10px;
+    /*margenes superior e inferior*/
+}
+
+/*estilos del botón al pasar el mouse*/
+form button:hover {
+    background: #c40812;
+    /*color de fondo más oscuro al pasar el mouse*/
+}
+
+/*estilos del botón al pasar el mouse*/
+.form-wrapper a{
+    color: #fff; /*color blanco para los enlaces*/
+    text-decoration: none; /*sin subrayado en los enlaces*/
+}
+
+.form-wrapper a:hover{
+    text-decoration: underline; /*subrayado al pasar el mouse*/
+}
+
+/*estilos de ayuda en el formulario*/
+.form-help{
+    display: flex; /*disposición en flexbox*/
+    flex-direction: column; /*coloca los elementos uno sobre otros*/
+    align-items: flex-start; /*alinear a la izquierda*/
+}
+
+.login-container{
+    width: 100%; /*ancho completo del contenedor*/
+    margin-bottom: 10px; /*espacio inferior del contenedor*/
+}
+
+.login-button {
+    background-color: rgba(255, 255, 255, 0.1);
+    /*fondo gris con opacidad para el botón*/
+    color: white;
+    /*texto blanco para el botón*/
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    /*borde blanco con opacidad*/
+    padding: 10px;
+    /*relleno interno del botón*/
+    font-size: 16px;
+    /*tamaño de fuente del botón*/
+    cursor: pointer;
+    /*cambia el puntero*/
+    border-radius: 5px;
+    /*bordes redondos*/
+    transition: background-color 0.3s, border-color 0.3s;
+    /*transición suave para el fondo y borde*/
+}
+
+/*estilos del botón al pasar el mouse*/
+.login-button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    /*fondo más claro al pasar el mouse*/
+    border-color: rgba(255, 255, 255, 0.6);
+    /*borde más claro al pasar el mouse*/
+}
+
+/*estilos de recordar*/
+.remember-me {
+    display: flex;
+    /*disposición en flex parael checkbox y la etiqueta*/
+    align-items: center;
+    /*alinear verticalmente*/
+    margin-top: 10px;
+    /*espacio superior*/
+}
+
+.remember-me input {
+    margin-right: 5px;
+    /*margen a la derecha para el checkbox*/
+}
+
+/*estilos de texto adicionales*/
+.form-wrapper small {
+    display: block;
+    /* muestra como bloque para ocupar todo el ancho*/
+    margin-top: 15px;
+    /*margen superior*/
+    color: #b3b3b3;
+    /*color claro*/
+}
+
+/*color blanco para recuerdame*/
+.form-wrapper small a {
+    color: #0071eb;
+    /*color azul para los enlaces*/
+}
+
+.remember-me label {
+    color: #fff
+    /*cambia a blanco para la etiqueta recuerdame*/
+}
+
+/*color gris claro para: Primera vez en Netflix*/
+.form-wrapper p {
+    color: #b3b3b3;
+    /* cambia a gris claro para el texto*/
+}
+
+/*estilos para: olvidaste tu contraseña*/
+.form-help p {
+    text-align: center;
+    /*centrado del texto*/
+    width: 100%;
+    /*ancho completo para centrar correctamente*/
+    color: #b3b3b3;
+    /*color gris claro*/
+}
+
+/*responsivo*/
+@media (max-width: 740px) {
+
+    /*máximo de ancho*/
+    body::before {
+        display: none;
+        /*oculta el fondo en pantalla pequeñas*/
+    }
+
+    .form-wrapper {
+        width: 90%;
+        /*ancho del formulario en pantallas pequeñas*/
+        padding: 20px;
+        /*relleno reducido en pantallas pequeñas*/
+    }
+
+    .logo{
+        left: 33px; /*alineará el logo a las letras "iniciar sesión" en pantallas pequeñas*/
+    }
+}
+
